@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Advisory System (FADSS)</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        Farmer Advisory & Decision Support System
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#" onclick="showPage('crop')">Crop Advisory</a>
+        <a href="#" onclick="showPage('market')">Market Prices</a>
+        <a href="#" onclick="showPage('fertilizer')">Fertilizers</a>
+        <a href="#" onclick="showPage('pest')">Pest Control</a>
+        <a href="#" onclick="showPage('weather')">Weather</a>
+        <a href="#" onclick="showPage('voice')">Voice Assistant</a>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="home-container">
+            <h1>👨‍🌾 Welcome Farmer</h1>
+            <p>Select any option from above menu.</p>
+        </div>
+    </div>
+
+    <!-- CROP ADVISORY -->
+    <div id="crop" class="page">
+        <div class="card">
+            <h2>Crop Advisory</h2>
+            <input id="cropName" type="text" placeholder="Enter crop name">
+            <button onclick="getCrop()">Get Advisory</button>
+            <div id="cropResult" class="card result-box"></div>
+        </div>
+    </div>
+
+    <!-- MARKET PRICE -->
+    <div id="market" class="page">
+        <div class="card">
+            <h2>Market Prices</h2>
+            <input id="marketCrop" type="text" placeholder="Enter crop name">
+            <button onclick="getMarket()">Get Price</button>
+            <div id="marketResult" class="card result-box"></div>
+        </div>
+    </div>
+
+    <!-- FERTILIZER -->
+    <div id="fertilizer" class="page">
+        <div class="card">
+            <h2>Fertilizer Advice</h2>
+            <input id="fertCrop" type="text" placeholder="Enter crop name">
+            <button onclick="getFertilizer()">Get Fertilizer</button>
+            <div id="fertResult" class="card result-box"></div>
+        </div>
+    </div>
+
+    <!-- PEST -->
+    <div id="pest" class="page">
+        <div class="card">
+            <h2>Pest Control</h2>
+            <input id="pestCrop" type="text" placeholder="Enter crop name">
+            <button onclick="getPest()">Get Pest Info</button>
+            <div id="pestResult" class="card result-box"></div>
+        </div>
+    </div>
+
+    <!-- WEATHER -->
+    <div id="weather" class="page">
+        <div class="card">
+            <h2>Weather Information</h2>
+            <input id="weatherLoc" type="text" placeholder="Enter your location">
+            <button onclick="getWeather()">Get Weather</button>
+            <div id="weatherResult" class="card result-box"></div>
+        </div>
+    </div>
+
+    <!-- VOICE -->
+    <div id="voice" class="page">
+        <div class="card">
+            <h2>🎤 Voice Assistant</h2>
+            <input id="voiceOutput" type="text" placeholder="Your voice text appears here">
+            <button id="startMic">Start Listening</button>
+            <div id="voiceResponse" class="card result-box"></div>
+        </div>
+    </div>
+
+    <!-- Connect JS -->
+    <script src="app.js"></script>
+
+</body>
+</html>

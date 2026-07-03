@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login - FADSS</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>FADSS – Login</header>
+
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="card" style="max-width: 420px;">
+        <h2>Login</h2>
+        <p>Login using Phone or Email</p>
+
+        <label>Phone / Email</label>
+        <input id="loginInput" type="text" placeholder="Enter phone or email">
+
+        <button onclick="sendOTP()">Send OTP</button>
+
+        <div id="otpBox" style="display:none; margin-top:20px;">
+            <label>Enter OTP</label>
+            <input id="loginOtp" type="text" placeholder="Enter OTP">
+
+            <button onclick="verifyOTP()">Verify & Login</button>
+        </div>
+
+        <div id="loginMessage" class="card result-box" style="display:none;"></div>
+    </div>
+
+    <!-- Connect app.js -->
+    <script src="app.js"></script>
+
+</body>
+</html>
